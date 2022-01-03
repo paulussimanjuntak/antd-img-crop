@@ -8,11 +8,11 @@ import './index.less';
 const cls = 'img-crop';
 
 const INIT_ZOOM = 1;
-const ZOOM_STEP = 0.1;
+const ZOOM_STEP = 0.0001;
 const INIT_ROTATE = 0;
 const ROTATE_STEP = 1;
-const MIN_ROTATE = -180;
-const MAX_ROTATE = 180;
+const MIN_ROTATE = 0;
+const MAX_ROTATE = 360;
 
 const EasyCrop = forwardRef((props, ref) => {
   const {
@@ -362,6 +362,7 @@ const ImgCrop = forwardRef((props, ref) => {
           onCancel={onCancel}
           maskClosable={false}
           destroyOnClose
+          centered
           {...modalProps}
         >
           <EasyCropMemo
