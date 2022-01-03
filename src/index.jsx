@@ -92,10 +92,7 @@ const EasyCrop = forwardRef((props, ref) => {
       />
       {zoom && (
         <section className={`${cls}-control ${cls}-control-zoom`}>
-          <button
-            onClick={() => setZoomVal(zoomVal - ZOOM_STEP)}
-            disabled={zoomVal - ZOOM_STEP < minZoom}
-          >
+          <button onClick={() => setZoomVal(zoomVal - 0.01)} disabled={zoomVal - 0.01 < minZoom}>
             －
           </button>
           <AntSlider
@@ -106,10 +103,7 @@ const EasyCrop = forwardRef((props, ref) => {
             onChange={setZoomVal}
             tooltipVisible={false}
           />
-          <button
-            onClick={() => setZoomVal(zoomVal + ZOOM_STEP)}
-            disabled={zoomVal + ZOOM_STEP > maxZoom}
-          >
+          <button onClick={() => setZoomVal(zoomVal + 0.01)} disabled={zoomVal + 0.01 > maxZoom}>
             ＋
           </button>
         </section>

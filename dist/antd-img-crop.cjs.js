@@ -135,9 +135,9 @@ var EasyCrop = /*#__PURE__*/React.forwardRef(function (props, ref) {
     className: cls + "-control " + cls + "-control-zoom"
   }, /*#__PURE__*/React__default["default"].createElement("button", {
     onClick: function onClick() {
-      return setZoomVal(zoomVal - ZOOM_STEP);
+      return setZoomVal(zoomVal - 0.01);
     },
-    disabled: zoomVal - ZOOM_STEP < minZoom
+    disabled: zoomVal - 0.01 < minZoom
   }, "\uFF0D"), /*#__PURE__*/React__default["default"].createElement(AntSlider__default["default"], {
     min: minZoom,
     max: maxZoom,
@@ -147,9 +147,9 @@ var EasyCrop = /*#__PURE__*/React.forwardRef(function (props, ref) {
     tooltipVisible: false
   }), /*#__PURE__*/React__default["default"].createElement("button", {
     onClick: function onClick() {
-      return setZoomVal(zoomVal + ZOOM_STEP);
+      return setZoomVal(zoomVal + 0.01);
     },
-    disabled: zoomVal + ZOOM_STEP > maxZoom
+    disabled: zoomVal + 0.01 > maxZoom
   }, "\uFF0B")), rotate && /*#__PURE__*/React__default["default"].createElement("section", {
     className: cls + "-control " + cls + "-control-rotate"
   }, /*#__PURE__*/React__default["default"].createElement("button", {
