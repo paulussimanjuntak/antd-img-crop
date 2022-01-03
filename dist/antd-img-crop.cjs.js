@@ -143,7 +143,8 @@ var EasyCrop = /*#__PURE__*/React.forwardRef(function (props, ref) {
     max: maxZoom,
     step: ZOOM_STEP,
     value: zoomVal,
-    onChange: setZoomVal
+    onChange: setZoomVal,
+    tooltipVisible: false
   }), /*#__PURE__*/React__default["default"].createElement("button", {
     onClick: function onClick() {
       return setZoomVal(zoomVal + ZOOM_STEP);
@@ -161,7 +162,8 @@ var EasyCrop = /*#__PURE__*/React.forwardRef(function (props, ref) {
     max: MAX_ROTATE,
     step: ROTATE_STEP,
     value: rotateVal,
-    onChange: setRotateVal
+    onChange: setRotateVal,
+    tooltipVisible: false
   }), /*#__PURE__*/React__default["default"].createElement("button", {
     onClick: function onClick() {
       return setRotateVal(rotateVal + ROTATE_STEP);
