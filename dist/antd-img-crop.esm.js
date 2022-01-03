@@ -111,6 +111,7 @@ var EasyCrop = /*#__PURE__*/forwardRef(function (props, ref) {
     maxZoom: maxZoom,
     onCropComplete: onCropComplete,
     onMediaLoaded: onMediaLoaded,
+    restrictPosition: false,
     classes: {
       containerClassName: cls + "-container",
       mediaClassName: cls + "-media"
