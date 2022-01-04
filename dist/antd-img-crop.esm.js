@@ -317,7 +317,7 @@ var ImgCrop = /*#__PURE__*/forwardRef(function (props, ref) {
     onClose();
   }, []);
   var onOk = useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee3() {
-    var rawImg, _cropPixelsRef$curren, cropWidth, cropHeight, cropX, cropY, canvas, ctx, rawWidth, rawHeight, boxSize, imgWidth, imgHeight, ratio, half, imgX, imgY, rotatedImg, _fileRef$current, type, name, uid, onBlob;
+    var rawImg, _cropPixelsRef$curren, cropWidth, cropHeight, cropX, cropY, canvas, ctx, rawWidth, rawHeight, boxSize, imgWidth, imgHeight, half, imgX, imgY, rotatedImg, _fileRef$current, type, name, uid, onBlob;
 
     return _regeneratorRuntime.wrap(function _callee3$(_context3) {
       while (1) {
@@ -337,16 +337,18 @@ var ImgCrop = /*#__PURE__*/forwardRef(function (props, ref) {
               imgWidth = rawWidth;
               imgHeight = rawHeight; // fit the long image
 
+              /*
               if (boxSize > 4096) {
-                ratio = 4096 / boxSize;
-                boxSize = 4096;
+                const ratio = 4096 / boxSize;
+                 boxSize = 4096;
                 imgWidth = rawWidth * ratio;
                 imgHeight = rawHeight * ratio;
-                cropWidth = cropWidth * ratio;
+                 cropWidth = cropWidth * ratio;
                 cropHeight = cropHeight * ratio;
                 cropX = cropX * ratio;
                 cropY = cropY * ratio;
               }
+              */
 
               canvas.width = boxSize;
               canvas.height = boxSize; // rotate image

@@ -267,6 +267,7 @@ const ImgCrop = forwardRef((props, ref) => {
       let imgHeight = rawHeight;
 
       // fit the long image
+      /*
       if (boxSize > 4096) {
         const ratio = 4096 / boxSize;
 
@@ -279,6 +280,7 @@ const ImgCrop = forwardRef((props, ref) => {
         cropX = cropX * ratio;
         cropY = cropY * ratio;
       }
+      */
 
       canvas.width = boxSize;
       canvas.height = boxSize;
