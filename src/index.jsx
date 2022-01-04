@@ -261,7 +261,8 @@ const ImgCrop = forwardRef((props, ref) => {
       // make canvas to cover the rotated image
       const { naturalWidth: rawWidth, naturalHeight: rawHeight } = rawImg;
 
-      let boxSize = Math.sqrt(Math.pow(rawWidth, 2) + Math.pow(rawHeight, 2));
+      // let boxSize = Math.sqrt(Math.pow(rawWidth, 2) + Math.pow(rawHeight, 2));
+      let boxSize = Math.max(rawWidth, rawHeight) * 2;
       let imgWidth = rawWidth;
       let imgHeight = rawHeight;
 

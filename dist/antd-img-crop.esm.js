@@ -331,8 +331,9 @@ var ImgCrop = /*#__PURE__*/forwardRef(function (props, ref) {
 
             if (rotate && rotateValRef.current !== INIT_ROTATE) {
               // make canvas to cover the rotated image
-              rawWidth = rawImg.naturalWidth, rawHeight = rawImg.naturalHeight;
-              boxSize = Math.sqrt(Math.pow(rawWidth, 2) + Math.pow(rawHeight, 2));
+              rawWidth = rawImg.naturalWidth, rawHeight = rawImg.naturalHeight; // let boxSize = Math.sqrt(Math.pow(rawWidth, 2) + Math.pow(rawHeight, 2));
+
+              boxSize = Math.max(rawWidth, rawHeight) * 2;
               imgWidth = rawWidth;
               imgHeight = rawHeight; // fit the long image
 
